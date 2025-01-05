@@ -1,0 +1,21 @@
+.hospital {
+  display: flex;
+  flex-flow: row wrap;
+  flex-wrap: wrap-reverse;
+  width: 78%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding: 40px 20px 0px;
+  background-color: #f5f5f5;
+  box-shadow: 10px 2px 3px -3px #000000;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hospital-cont {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  overflow-y: auto;
+}

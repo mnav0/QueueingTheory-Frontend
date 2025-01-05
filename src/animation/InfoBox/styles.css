@@ -1,0 +1,12 @@
+.display-board {
+  background-color: #f5f5f5 ;
+  border: 2px black solid; 
+  padding: 1rem;
+  height: 50%;
+  width: 100%;
+  overflow: auto;
+}
+
+.header-name {
+  text-transform: capitalize;
+}

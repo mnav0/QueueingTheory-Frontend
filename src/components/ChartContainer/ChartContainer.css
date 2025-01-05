@@ -1,0 +1,13 @@
+.outer {
+  height: 100%;
+}
+
+.innerChart {
+  height: 95%;
+}
+
+.innerLabel {
+  height: 5%;
+  font-size: larger;
+  font-weight: 500;
+}

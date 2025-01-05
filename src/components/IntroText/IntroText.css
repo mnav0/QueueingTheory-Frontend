@@ -1,0 +1,7 @@
+.intro {
+  @apply max-w-lg text-center font-bold;
+}
+
+.intro-detail {
+  @apply .intro italic font-semibold;
+}

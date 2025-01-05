@@ -1,0 +1,24 @@
+.anim-container {
+  overflow-y: hidden;
+  height: 100%;
+}
+
+.animation {
+  width: 65%;
+  height: 100%;
+}
+
+.info-box {
+  width: 35%;
+  height: 100%;
+}
+
+/* CSS props below need to be cleaned up and moved to respective files */
+.queue-cont {
+  height: 40%;
+  margin-top: 2em;
+}
+
+.hospital-cont {
+  height: 70%;
+}
