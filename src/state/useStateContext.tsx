@@ -19,6 +19,13 @@ export interface InputNode2 {
   chance?: number;
 }
 
+export interface InputNodeCT {
+  numCTs: number;
+  patientRate: number;
+  CTRate: number;
+  chance?: number;
+}
+
 export interface ResultNode {
   queueLengths: number[],
   waits: number[],
