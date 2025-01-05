@@ -8,6 +8,10 @@ export interface InputFieldProps {
   fieldID: string;
 }
 
+interface InputContainerProps {
+  pageType: string
+}
+
 const inputsData: InputFieldProps[] = [
   {
     fieldTitle: "Workup Rate",
@@ -23,14 +27,14 @@ const inputsData: InputFieldProps[] = [
   }
 ]
 
-export const InputContainer: React.FC = () => {
-
+export const InputContainer: React.FC<InputContainerProps> = ({pageType}) => {
+  
   return (
     <div className="container">
       {inputsData.map((value, index) => {
         return(<InputField fieldTitle={value.fieldTitle} fieldID={value.fieldID} key={index} />)
       })}
-      <InputOptions />
+      <InputOptions pageType={pageType}/>
       <InputButtons />
     </div>
   )

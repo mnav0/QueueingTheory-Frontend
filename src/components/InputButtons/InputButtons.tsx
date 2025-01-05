@@ -14,7 +14,8 @@ const initInputState: InputNode = {
   workupTime: 0,
   provNumber: 0,
   patientSpeed: 0,
-  probability: "Bernoulli"
+  probability: "Bernoulli",
+  simType: "dept",
 }
 
 export const InputButtons: React.FC = () => {
@@ -22,7 +23,8 @@ export const InputButtons: React.FC = () => {
     workupTime: NumberParam,
     provNumber: NumberParam,
     patientSpeed: NumberParam,
-    probability: StringParam
+    probability: StringParam,
+    simType: StringParam
   })
   const inputs = useInputs()
   const results = useResults()
@@ -38,6 +40,7 @@ export const InputButtons: React.FC = () => {
         ...filteredQuery
       }
     })
+    console.log(inputs.simType)
   }, [query]);
 
   async function startSimulation() {

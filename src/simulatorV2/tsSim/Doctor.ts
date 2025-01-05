@@ -69,6 +69,7 @@ export class Doctor {
     }
   }
 
+  // TODO potential bug - no check for if the pt has needs? only returns if it's already evaled
   active_patient_need() {
     /// if there is an active patient with stuff to do, return them, else none
     for (var i = 0; i < this.ActivePts.length; i++) {

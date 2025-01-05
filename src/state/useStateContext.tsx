@@ -7,6 +7,7 @@ export interface InputNode {
   patientSpeed: number;
   probability: string;
   chance?: number;
+  simType: string;
   [key: string]: any;
 }
 
@@ -34,7 +35,8 @@ export function useStateContext() {
     workupTime: 0,
     provNumber: 0,
     patientSpeed: 0,
-    probability: "Bernoulli"
+    probability: "Bernoulli", 
+    simType: "dept",
   });
   const setInputField = useCallback(
     (newInputs: Partial<InputNode>) => setInputs({ ...inputs, ...newInputs }),

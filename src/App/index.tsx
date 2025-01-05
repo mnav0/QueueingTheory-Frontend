@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import "./App.css"
 
@@ -6,20 +7,21 @@ import { IntroContainer } from "src/components/IntroContainer"
 import { SimContainer } from "src/components/SimContainer"
 import { IconBar } from "src/components/IconBar"
 import { ED } from 'src/simulatorV2/tsSim/ED';
+import DeptSim from 'src/pages/DeptSim';
+import CTSim from 'src/pages/CTSim';
+import Layout from 'src/components/Layout/Layout';
 
 function App() {
-  const [selected, setSelect] = useState("anim")
 
   return (
-    <div className="app h-screen flex items-stretch">
-      <div className="app-left flex flex-col relative justify-center p-4 bg-gray-700 text-gray-300">
-        <IconBar setSelect={setSelect} />
-        <IntroContainer />
-      </div>
-      <div className="app-right flex flex-col justify-center p-4 flex-1">
-        <SimContainer selected={selected} />
-      </div>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Layout>
+          <Route exact path="/" component={DeptSim} />
+          <Route path="/ct" component={CTSim} />
+        </Layout>
+      </Switch>
+    </BrowserRouter>
   );
 }
 

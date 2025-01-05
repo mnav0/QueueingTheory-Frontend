@@ -3,12 +3,16 @@ import { IntroText } from "src/components/IntroText"
 import { InputContainer } from "src/components/InputContainer"
 import "./IntroContainer.css";
 
-export const IntroContainer: React.FC = () => {
+interface IntroProps {
+  pageType: string
+}
 
+export const IntroContainer: React.FC<IntroProps> = ({ pageType }) => {
+  
   return (
     <div className="container">
-      <IntroText></IntroText>
-      <InputContainer></InputContainer>
+      <IntroText pageType={pageType}></IntroText>
+      <InputContainer pageType={pageType}></InputContainer>
     </div>
   )
 }
